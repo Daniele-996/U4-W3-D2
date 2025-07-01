@@ -23,7 +23,7 @@ public class EventoDAO {
         System.out.println("L'evento " + newEvento.getTitolo() + " è stato correttamente salvato nel database");
     }
 
-    public void findById(long eventoId){
+   /* public void findById(long eventoId){
         Evento foundById = entityManager.find()
-    }
+    }*/
 }
