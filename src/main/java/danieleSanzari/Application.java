@@ -16,11 +16,21 @@ public class Application {
         EntityManager em = emf.createEntityManager();
         EventoDAO ed = new EventoDAO(em);
 
-        Evento festa2 = new Evento("festa adulti", LocalDate.now(), "festi per adulti", TipoEvento.PUBBLICO, 150);
-        Evento festa1 = new Evento("festa bambini", LocalDate.now(), "festi per bambini", TipoEvento.PUBBLICO, 50);
+        Evento festa1 = new Evento("festa compleanno", LocalDate.now(), "festa compleanno", TipoEvento.PUBBLICO, 15);
+        Evento festa2 = new Evento("festa per bambini", LocalDate.now(), "festa per bambini", TipoEvento.PUBBLICO, 200);
+        Evento festa3 = new Evento("festa per adulti", LocalDate.now(), "festa per adulti", TipoEvento.PRIVATO, 25);
+        Evento festa4 = new Evento("festa per ragazzi", LocalDate.now(), "festa per ragazzi", TipoEvento.PUBBLICO, 100);
+        Evento festa5 = new Evento("festa per anziani", LocalDate.now(), "festa per anziani", TipoEvento.PRIVATO, 60);
+        Evento festa6 = new Evento("festa per dipendenti", LocalDate.now(), "festi per dipendenti", TipoEvento.PRIVATO, 250);
+        Evento festa7 = new Evento("festa per dipendenti", LocalDate.now(), "festi per dipendenti", TipoEvento.PRIVATO, 250);
 
         ed.save(festa1);
         ed.save(festa2);
+        ed.save(festa3);
+        ed.save(festa4);
+        ed.save(festa5);
+        ed.save(festa6);
+        ed.save(festa7);
 
         emf.close();
         em.close();
